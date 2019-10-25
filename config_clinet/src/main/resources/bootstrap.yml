@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: spring-cloud-config-client
+  cloud:
+    config:
+      name: ebid_tyc
+      profile: dev
+      label: master
+      discovery:
+        service-id: spring-cloud-config-server
+        enabled: true    #发现config service
+
+eureka:
+  client:
+    service‐url:
+      defaultZone: http://localhost:8001/eureka/
